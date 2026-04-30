@@ -418,6 +418,7 @@ def _variables_template_path(package_root, name):
     distribution_path = _resolve_distribution_path(
         Path('scripts') / name,
         Path('share/jetson_stats') / name,
+        Path('jetson_stats') / name,
         Path(name),
     )
     if distribution_path:
@@ -452,6 +453,7 @@ def _variables_template_path(package_root, name):
             shared_roots.add(Path(user_base))
     for root in shared_roots:
         candidates.append(root / 'share' / 'jetson_stats' / name)
+        candidates.append(root / 'jetson_stats' / name)
     for candidate in candidates:
         if candidate.exists():
             return candidate

@@ -236,5 +236,5 @@ if __name__ == '__main__':
             'install': JTOPInstallCommand,
         },
         # Include data files that need special installation
-        data_files=[('jetson_stats', ['services/jtop.service', 'scripts/jtop_env.sh'])],
+        data_files=[('share/jetson_stats', ['services/jtop.service', 'scripts/jtop_env.sh'])],
     )
