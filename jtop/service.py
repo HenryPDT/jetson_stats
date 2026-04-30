@@ -223,6 +223,8 @@ def _service_template_path(package_root, name):
             sys.exec_prefix,
             getattr(sys, 'base_exec_prefix', None),
             os.environ.get('VIRTUAL_ENV'),
+            '/usr/local',
+            '/usr',
         )
         if prefix
     }
